@@ -1,0 +1,328 @@
+{
+  "book": "沉思錄・示範",
+  "chapter": "卷一・對照節選",
+  "h1": "Book I",
+  "enVoice": "en-GB-RyanNeural",
+  "zhVoice": "zh-TW-HsiaoChenNeural",
+  "paras": [
+    {"sents": [
+      {"en": "From my grandfather Verus I learned good morals and the government of my temper.",
+       "zh": "從我祖父維魯斯身上，我學到好的品德，還有怎麼管好自己的脾氣。",
+       "notes": [
+        {"w": "the government of my temper", "m": "管好自己的脾氣", "kk": "/ˋtɛmpɚ/", "pos": "片語",
+         "def": "government 在這裡是古典用法，指「約束、控制」，不是政府；temper 是脾氣、性子。整個片語字面是「對脾氣的治理」。",
+         "use": "Meditation helps with the government of my temper.", "useZh": "靜坐幫助我管好自己的脾氣。",
+         "why": "把管脾氣說成一門「治理」，是羅馬人的莊重講法——脾氣不是壓下去，是治理好。", "zhw": "管好"}
+       ]}
+    ]},
+    {"sents": [
+      {"en": "From the reputation and remembrance of my father, modesty and a manly character.",
+       "zh": "從我父親留下的名聲、還有大家對他的記憶裡，我學到謙遜，也學到一個男子漢該有的樣子。",
+       "notes": [
+        {"w": "remembrance", "m": "眾人的追憶", "kk": "/rɪˋmɛmbrəns/", "pos": "名詞",
+         "def": "指留在別人心中的記憶與懷念，比 memory 正式，常用在對逝者的追思。",
+         "use": "The park was built in remembrance of the founder.", "useZh": "這座公園是為了紀念創辦人而建的。",
+         "why": "父親早逝，作者是從別人「對他的追憶」認識父親的——一個字就把這層距離講出來。", "zhw": "記憶"},
+        {"w": "modesty", "m": "謙遜", "kk": "/ˋmɑdəstɪ/", "pos": "名詞",
+         "def": "不誇耀自己、不搶功勞的品格；形容詞是 modest，也可指衣著或用度的樸素。",
+         "use": "Her modesty kept her from mentioning the award.", "useZh": "她太謙虛了，得獎的事提都沒提。",
+         "why": "羅馬人眼中的男子氣概不是張揚，是收斂——所以謙遜和男子漢擺在同一句。", "zhw": "謙遜"}
+       ]}
+    ]},
+    {"sents": [
+      {"en": "From my mother, piety and beneficence, and abstinence, not only from evil deeds, but even from evil thoughts;",
+       "zh": "從我母親身上，我學到虔敬跟樂善好施。她讓我懂得節制——不只是不做壞事，連壞念頭都不要有。",
+       "notes": [
+        {"w": "piety", "m": "虔敬", "kk": "/ˋpaɪətɪ/", "pos": "名詞",
+         "def": "對神明、長輩發自內心的敬意與盡責；宗教味比 respect 重，形容詞是 pious。",
+         "use": "She lights incense every morning out of piety.", "useZh": "她每天早上上香，是出於虔敬。",
+         "why": "羅馬人把對神和對家的盡責看成同一種德性，這個字兩層都包。", "zhw": "虔敬"},
+        {"w": "abstinence", "m": "節制、戒絕", "kk": "/ˋæbstənəns/", "pos": "名詞",
+         "def": "主動不去碰某樣東西的自制，對象常是酒、慾望、享樂；動詞是 abstain from。",
+         "use": "The doctor advised abstinence from alcohol.", "useZh": "醫生建議他戒酒。",
+         "why": "重點在後半句：連壞念頭都要戒——節制做到念頭那一層，才是這句的力道。", "zhw": "節制"}
+       ]},
+      {"en": "and further, simplicity in my way of living, far removed from the habits of the rich.",
+       "zh": "再來，她教我生活要簡單，離有錢人那套習慣遠遠的。",
+       "notes": [
+        {"w": "far removed from", "m": "離…非常遠", "kk": "/rɪˋmuvd/", "pos": "片語",
+         "def": "不只是距離遠，更是性質上完全不同、劃清界線的意思。",
+         "use": "His new life is far removed from the city noise.", "useZh": "他的新生活離城市的喧囂遠遠的。",
+         "why": "身為未來皇帝卻要「離有錢人的習慣遠遠的」——這個片語把距離感拉到最大。", "zhw": "遠遠的"}
+       ]}
+    ]},
+    {"sents": [
+      {"en": "From my great-grandfather, not to have frequented public schools, and to have had good teachers at home,",
+       "zh": "從我曾祖父身上，我學到不必老是往公立學校跑，在家裡請好的老師就好。",
+       "notes": [
+        {"w": "frequented", "m": "常去、頻繁出入", "kk": "/ˋfrikwəntɪd/", "pos": "動詞",
+         "def": "frequent 當動詞用，指常常出入某個場所；比 go to 多了「習慣性、次數多」的意味。",
+         "use": "He frequented the same coffee shop for years.", "useZh": "他好幾年都固定往同一間咖啡店跑。",
+         "why": "frequent 平常多當形容詞（頻繁的），這裡當動詞是比較古雅的用法。", "zhw": "老是往公立學校跑"}
+       ]},
+      {"en": "and to know that on such things a man should spend liberally.",
+       "zh": "他也讓我懂得，這種事情該花錢就要大方地花。",
+       "notes": [
+        {"w": "spend liberally", "m": "大方地花錢", "kk": "/ˋlɪbərəlɪ/", "pos": "片語",
+         "def": "liberally 是慷慨地、不吝惜地；跟政治上的 liberal（自由派）同字源，核心都是「不設限」。",
+         "use": "On books, spend liberally.", "useZh": "買書這種事，就大方地花。",
+         "why": "整卷都在講節制，唯獨教育要大方花——對比放在一個副詞上。", "zhw": "大方地花"}
+       ]}
+    ]},
+    {"sents": [
+      {"en": "From my governor, to be neither of the green nor of the blue party at the games in the Circus, nor a partisan either of the Parmularius or the Scutarius at the gladiators' fights;",
+       "zh": "從帶我長大的師傅身上，我學到在賽場看比賽不要選邊站——不當綠隊的人，也不當藍隊的人；看角鬥士打鬥，也不偏袒小盾派或大盾派。",
+       "notes": [
+        {"w": "partisan", "m": "死忠支持者", "kk": "/ˋpɑrtəzn/", "pos": "名詞",
+         "def": "狂熱偏袒某一方的人，帶「不問是非、先站隊」的貶義；現代講政治對立常用 partisan politics。",
+         "use": "Try not to be a partisan before hearing both sides.", "useZh": "兩邊都還沒聽完，先別急著當某一方的死忠。",
+         "why": "兩千年前的賽車和角鬥就有「粉絲站隊文化」，作者從小被教不要捲進去。", "zhw": "偏袒"}
+       ]},
+      {"en": "from him too I learned endurance of labour, and to want little, and to work with my own hands,",
+       "zh": "他還教我要能吃苦耐勞，慾望要少，凡事自己動手做。",
+       "notes": [
+        {"w": "endurance", "m": "耐力、能吃苦", "kk": "/ɪnˋdjʊrəns/", "pos": "名詞",
+         "def": "長時間承受辛苦而不垮掉的能力；動詞是 endure，運動上的耐力訓練就叫 endurance training。",
+         "use": "Long hikes build endurance.", "useZh": "長程健行能練出耐力。",
+         "why": "endurance of labour 直譯是「對勞動的忍耐」——吃苦被當成一種可以練的能力。", "zhw": "吃苦耐勞"},
+        {"w": "to want little", "m": "慾望要少", "kk": "/wɑnt/", "pos": "片語",
+         "def": "want 這裡取「缺、需要」的古義，to want little 是「需要的東西很少」，不是「不想要」。",
+         "use": "He lives simply and wants little.", "useZh": "他過得簡單，需要的東西很少。",
+         "why": "斯多噶的核心用三個字講完：需要得少，就自由得多。", "zhw": "慾望要少"}
+       ]},
+      {"en": "and not to meddle with other people's affairs, and not to be ready to listen to slander.",
+       "zh": "不要多管別人的閒事，也不要一聽到人家講壞話就照單全收。",
+       "notes": [
+        {"w": "meddle with", "m": "插手、多管", "kk": "/ˋmɛdl/", "pos": "片語",
+         "def": "介入跟自己無關的事，貶義；比 get involved 多了「不受歡迎地亂插手」的意味。",
+         "use": "Don't meddle with your colleagues' projects.", "useZh": "別多管同事的案子。",
+         "why": "管好自己是這整卷反覆出現的主題，這裡是它最日常的版本。", "zhw": "多管"},
+        {"w": "slander", "m": "毀謗、壞話", "kk": "/ˋslændɚ/", "pos": "名詞",
+         "def": "口頭上的不實中傷；法律上跟書面毀謗（libel）相對，日常泛指講人壞話。",
+         "use": "He refused to spread slander about his rival.", "useZh": "他拒絕散播對手的壞話。",
+         "why": "注意教的不是「不要講」而是「不要輕易聽」——聽的人也有責任。", "zhw": "壞話"}
+       ]}
+    ]},
+    {"sents": [
+      {"en": "From Diognetus, not to busy myself about trifling things,",
+       "zh": "從迪奧格內圖斯身上，我學到不要把心思花在雞毛蒜皮的小事上。",
+       "notes": [
+        {"w": "trifling", "m": "微不足道的", "kk": "/ˋtraɪflɪŋ/", "pos": "形容詞",
+         "def": "小到不值得花時間的；名詞 trifle 是小事、瑣事，a trifle 也可當「一點點」用。",
+         "use": "Don't lose sleep over trifling matters.", "useZh": "別為雞毛蒜皮的小事睡不著。",
+         "why": "皇帝的時間管理第一課：先認出什麼是 trifling。", "zhw": "雞毛蒜皮"}
+       ]},
+      {"en": "and not to give credit to what was said by miracle-workers and jugglers about incantations and the driving away of daemons and such things;",
+       "zh": "那些變戲法的、耍把戲的人講什麼咒語、什麼驅魔趕鬼，我學會不去信這一套。",
+       "notes": [
+        {"w": "give credit to", "m": "相信、當真", "kk": "/ˋkrɛdɪt/", "pos": "片語",
+         "def": "credit 這裡是「信任」，give credit to 就是把某人的話當真；跟「給予肯定」的用法同源。",
+         "use": "I don't give credit to online rumors.", "useZh": "網路謠言我不當真。",
+         "why": "兩千年前的「不信偏方、不信怪力亂神」——理性訓練從小開始。", "zhw": "信"},
+        {"w": "incantations", "m": "咒語", "kk": "/ˏɪnkænˋteʃənz/", "pos": "名詞",
+         "def": "唸出來據稱有魔力的一串字句；字根 cant- 跟 chant（吟唱）同源。",
+         "use": "The play opens with a witch's incantation.", "useZh": "那齣戲以女巫的咒語開場。",
+         "why": "跟 jugglers（耍把戲的）擺在一起，咒語被歸進表演雜耍那一類——立場很清楚。", "zhw": "咒語"}
+       ]},
+      {"en": "and not to breed quails for fighting, nor to give myself up passionately to such things;",
+       "zh": "他也讓我不去養鬥鵪鶉，不要沉迷在那種東西裡面。",
+       "notes": [
+        {"w": "give myself up to", "m": "沉迷於", "kk": "/ˋpæʃənɪtlɪ/", "pos": "片語",
+         "def": "give oneself up to 是整個人投進去、任由某事吞掉自己；加上 passionately 就是「狂熱地沉迷」。",
+         "use": "He gave himself up to gaming for a whole year.", "useZh": "他整整一年沉迷在電玩裡。",
+         "why": "鬥鵪鶉是當時的賭博娛樂；問題不在鵪鶉，在「整個人陷進去」。", "zhw": "沉迷"}
+       ]},
+      {"en": "and to endure freedom of speech; and to have become intimate with philosophy;",
+       "zh": "他教我要受得了別人的直言，也讓我開始親近哲學。",
+       "notes": [
+        {"w": "endure freedom of speech", "m": "受得了別人直言", "kk": "/ɪnˋdjʊr/", "pos": "片語",
+         "def": "這裡的 freedom of speech 不是現代的「言論自由」，是「別人有話直說」；endure 是你要吞得下去。",
+         "use": "A good leader endures freedom of speech from the team.", "useZh": "好的主管受得了團隊有話直說。",
+         "why": "對未來的皇帝，這是最難的一課：權力越大，越少人敢對你說真話。", "zhw": "直言"}
+       ]},
+      {"en": "and to have been a hearer, first of Bacchius, then of Tandasis and Marcianus;",
+       "zh": "我先後跟過幾位老師聽課——先是巴奇烏斯，再來是坦達西斯跟馬奇亞努斯。",
+       "notes": [
+        {"w": "hearer", "m": "聽講的學生", "kk": "/ˋhɪrɚ/", "pos": "名詞",
+         "def": "古代哲學學校的「旁聽生、門生」，坐在老師跟前聽講的人；比 student 更強調「用耳朵學」。",
+         "use": "He was a hearer of the old master for three years.", "useZh": "他在老師傅門下聽了三年課。",
+         "why": "古代哲學是用聽的、用問的，不是用讀的——hearer 一個字就把學習方式講出來。", "zhw": "聽課"}
+       ]},
+      {"en": "and to have written dialogues in my youth; and to have desired a plank bed and skin, and whatever else of the kind belongs to the Grecian discipline.",
+       "zh": "我年輕的時候寫過對話錄，也開始嚮往睡木板床、蓋獸皮這種日子——這些都是希臘式修行的一部分。",
+       "notes": [
+        {"w": "plank bed", "m": "木板床", "kk": "/plæŋk/", "pos": "片語",
+         "def": "plank 是厚木板；plank bed 就是不加軟墊的板床，是刻意吃苦的修行配備。健身的「平板支撐」也叫 plank。",
+         "use": "The monks sleep on plank beds.", "useZh": "僧侶們睡木板床。",
+         "why": "一個少年「嚮往」睡木板床——這股憧憬比任何大道理都能說明他是誰。", "zhw": "木板床"},
+        {"w": "discipline", "m": "修行、紀律", "kk": "/ˋdɪsəplɪn/", "pos": "名詞",
+         "def": "有規矩的自我訓練；也指學科（a discipline）。這裡的 Grecian discipline 指希臘哲學家那套簡樸的修行方式。",
+         "use": "Writing every day takes discipline.", "useZh": "每天寫作需要紀律。",
+         "why": "discipline 在本卷出現多次——對斯多噶而言，哲學不是學說，是一套要「練」的生活。", "zhw": "修行"}
+       ]}
+    ]},
+    {"sents": [
+      {"en": "From Rusticus I received the impression that my character required improvement and discipline;",
+       "zh": "從魯斯提庫斯身上，我才意識到自己的品格還需要改進、需要磨練。",
+       "notes": [
+        {"w": "received the impression", "m": "深刻體悟到", "kk": "/ɪmˋprɛʃən/", "pos": "片語",
+         "def": "impression 是壓印進心裡的認知；receive the impression 比 realize 更被動、更深——像被蓋了一個印。",
+         "use": "From her feedback I received the impression that I had much to learn.", "useZh": "從她的回饋裡，我深刻體悟到自己還有很多要學。",
+         "why": "整卷唯一一句「我被點醒」——別人給他知識，魯斯提庫斯給他自知之明。", "zhw": "意識到"}
+       ]},
+      {"en": "and from him I learned not to be led astray to sophistic emulation, nor to writing on speculative matters, nor to delivering little hortatory orations,",
+       "zh": "他讓我不要走偏——不要去跟人比誰的詭辯厲害，不要寫空談玄理的東西，也不要動不動就發表一小段勸世的演講。",
+       "notes": [
+        {"w": "sophistic", "m": "詭辯的", "kk": "/səˋfɪstɪk/", "pos": "形容詞",
+         "def": "聽起來頭頭是道、其實只為贏不為真的論證方式；源自古希臘的詭辯學派（Sophists）。",
+         "use": "His argument sounds clever but is merely sophistic.", "useZh": "他的論點聽起來聰明，其實只是詭辯。",
+         "why": "當時的知識圈流行鬥嘴炫技；魯斯提庫斯教他分清「講贏」和「講對」。", "zhw": "詭辯"},
+        {"w": "hortatory", "m": "勸誡式的", "kk": "/ˋhɔrtəˏtorɪ/", "pos": "形容詞",
+         "def": "以勸勉、訓話為目的的（言論）；字根同 exhort（力勸）。是個書卷味很重的字。",
+         "use": "The coach's hortatory speech got old fast.", "useZh": "教練那套訓話式的演講很快就讓人膩了。",
+         "why": "「動不動就勸世」是一種表演——真正的修行不需要觀眾，下一句就講到這個。", "zhw": "勸世"}
+       ]},
+      {"en": "nor to showing myself off as a man who practises much discipline, or does benevolent acts in order to make a display;",
+       "zh": "他讓我不要裝出一副很有修養的樣子，也不要為了給人看才去做好事。",
+       "notes": [
+        {"w": "make a display", "m": "做給人看", "kk": "/dɪˋsple/", "pos": "片語",
+         "def": "display 是展示；make a display 就是刻意演給別人看，貶義。",
+         "use": "He helps quietly, never to make a display.", "useZh": "他都默默幫忙，從不做給人看。",
+         "why": "好事一旦是演的，就不是好事了——這句是整卷對「表演型人格」最直接的一刀。", "zhw": "給人看"}
+       ]},
+      {"en": "and to abstain from rhetoric, and poetry, and fine writing;",
+       "zh": "他要我遠離華麗的修辭、詩歌，還有那些漂亮的文章。",
+       "notes": [
+        {"w": "abstain from", "m": "戒除、遠離", "kk": "/əbˋsten/", "pos": "片語",
+         "def": "主動克制自己不去碰；名詞是 abstinence（本卷第三句剛出現過），投票棄權也用這個字。",
+         "use": "He abstained from social media for a month.", "useZh": "他戒了一個月的社群媒體。",
+         "why": "作者年輕時熱愛修辭學，老師要他戒掉——對他來說這是真的「戒」。", "zhw": "遠離"}
+       ]},
+      {"en": "and not to walk about in the house in my outdoor dress, nor to do other things of the kind;",
+       "zh": "他教我不要穿著外出服在家裡走來走去，這一類的事情都別做。",
+       "notes": [
+        {"w": "outdoor dress", "m": "外出服", "kk": "/ˋaʊtˏdor/", "pos": "片語",
+         "def": "見客、出門用的正式衣著；羅馬語境指 toga 那類場面服裝。",
+         "use": "He changed out of his outdoor dress the moment he got home.", "useZh": "他一到家就把外出服換掉。",
+         "why": "在家還穿著場面服裝＝隨時在「上場」。連穿衣都要分清楚哪些是演的。", "zhw": "外出服"}
+       ]},
+      {"en": "and to write my letters with simplicity, like the letter which Rusticus wrote from Sinuessa to my mother;",
+       "zh": "他要我寫信樸實一點，就像他從西努薩寫給我母親的那封信那樣。",
+       "notes": [
+        {"w": "simplicity", "m": "樸實、簡單", "kk": "/sɪmˋplɪsətɪ/", "pos": "名詞",
+         "def": "不加修飾的簡單；with simplicity 當副詞片語用，就是「樸實地」。",
+         "use": "She explains hard ideas with simplicity.", "useZh": "她能把難的概念講得很樸實。",
+         "why": "標準不是一條規則，而是一封具體的信——「像那封信那樣」比任何理論都清楚。", "zhw": "樸實"}
+       ]},
+      {"en": "and with respect to those who have offended me by words, or done me wrong, to be easily disposed to be pacified and reconciled, as soon as they have shown a readiness to be reconciled;",
+       "zh": "要是有人用言語冒犯我、或是做了對不起我的事，只要對方願意和解，我就該很容易消氣、跟人和好。",
+       "notes": [
+        {"w": "pacified", "m": "消氣、被平息", "kk": "/ˋpæsəˏfaɪd/", "pos": "動詞",
+         "def": "pacify 是使平靜、平息怒氣；字根 pac- 就是 peace，安撫嬰兒的奶嘴叫 pacifier。",
+         "use": "A sincere apology quickly pacified her.", "useZh": "一句真誠的道歉很快讓她消了氣。",
+         "why": "注意順序：對方先伸手，你就要接——氣可以有，但不能捨不得放。", "zhw": "消氣"},
+        {"w": "reconciled", "m": "和好", "kk": "/ˋrɛkənˏsaɪld/", "pos": "動詞",
+         "def": "reconcile 是修復關係、重歸於好；也用在「調和」兩個矛盾的事物，會計對帳也叫 reconcile。",
+         "use": "The brothers reconciled after years of silence.", "useZh": "兄弟倆冷戰多年後和好了。",
+         "why": "一句話裡出現兩次 reconciled——條件和結果都是它，和好這件事沒有討價還價。", "zhw": "和好"}
+       ]},
+      {"en": "and to read carefully, and not to be satisfied with a superficial understanding of a book; nor hastily to give my assent to those who talk overmuch;",
+       "zh": "他要我讀書要仔細，不要讀個大概就滿足；別人話講得太多，也不要急著點頭同意。",
+       "notes": [
+        {"w": "superficial", "m": "表面的、粗淺的", "kk": "/ˏsupɚˋfɪʃəl/", "pos": "形容詞",
+         "def": "只停在表層、沒有深入的；字面就是 super（上面）＋ face（表面）。可形容理解、傷口、人。",
+         "use": "A superficial reading misses the point of this book.", "useZh": "讀個大概，就會錯過這本書真正要講的。",
+         "why": "你現在用兩種深度聽同一本書——這句正好是「速讀跟精讀差在哪」的兩千年前版本。", "zhw": "讀個大概"},
+        {"w": "assent", "m": "同意、首肯", "kk": "/əˋsɛnt/", "pos": "名詞",
+         "def": "正式的同意；give assent to 就是點頭認可。跟 agree 比起來更書面、更鄭重。",
+         "use": "Don't give your assent before reading the contract.", "useZh": "合約沒讀完，先別點頭。",
+         "why": "話多的人自帶說服力，斯多噶把「不急著同意」當成一種要練的肌肉。", "zhw": "點頭同意"}
+       ]},
+      {"en": "and I am indebted to him for being acquainted with the discourses of Epictetus, which he communicated to me out of his own collection.",
+       "zh": "我還要感謝他——是他把自己收藏的愛比克泰德講稿拿給我看，我才認識這些內容。",
+       "notes": [
+        {"w": "indebted", "m": "感激、受惠於", "kk": "/ɪnˋdɛtɪd/", "pos": "形容詞",
+         "def": "字面是「欠債的」（debt），引申為受了恩惠、心懷感激；be indebted to sb for sth 是固定句型。",
+         "use": "I am indebted to my first editor for everything.", "useZh": "我對第一位編輯感激不盡。",
+         "why": "一本改變他一生的書，是老師從私人收藏裡拿出來的——這筆「債」他記了一輩子。", "zhw": "感謝"},
+        {"w": "discourses", "m": "講稿、論說", "kk": "/ˋdɪskorsɪz/", "pos": "名詞",
+         "def": "有系統的談話或論述紀錄；愛比克泰德的《語錄》英譯就叫 Discourses——是學生聽課的筆記。",
+         "use": "His discourses were collected by his students.", "useZh": "他的講稿是學生們整理下來的。",
+         "why": "本書架上那本《愛比克泰德語錄》，就是這裡講的這份講稿——兩本書在這句相遇。", "zhw": "講稿"}
+       ]}
+    ]},
+    {"sents": [
+      {"en": "From Apollonius I learned freedom of will and undeviating steadiness of purpose;",
+       "zh": "從阿波羅尼烏斯身上，我學到意志的自由，還有立定目標之後就毫不動搖的堅定。",
+       "notes": [
+        {"w": "undeviating", "m": "毫不偏離的", "kk": "/ʌnˋdivɪˏetɪŋ/", "pos": "形容詞",
+         "def": "deviate 是偏離路線，undeviating 就是從不偏離、筆直到底的。",
+         "use": "She pursued the goal with undeviating focus.", "useZh": "她毫不動搖地朝目標前進。",
+         "why": "不是「很少偏離」，是「不偏離」——un- 一個字首把程度鎖死。", "zhw": "毫不動搖"}
+       ]},
+      {"en": "and to look to nothing else, not even for a moment, except to reason;",
+       "zh": "他讓我懂得，除了理性以外，什麼都不該去看重，連一刻都不行。",
+       "notes": [
+        {"w": "look to", "m": "看重、指望", "kk": "/lʊk/", "pos": "片語",
+         "def": "把目光放在某處，引申為依靠、以…為依歸；look to reason 就是凡事回到理性來判斷。",
+         "use": "In a crisis, look to the facts first.", "useZh": "遇到危機，先回到事實。",
+         "why": "「連一刻都不行」——斯多噶的理性不是原則，是每一秒的操作方式。", "zhw": "看重"}
+       ]},
+      {"en": "and to be always the same, in sharp pains, on the occasion of the loss of a child, and in long illness;",
+       "zh": "他教我不管碰到什麼處境都要保持一樣——劇烈的疼痛、失去孩子的時候，還是久病纏身的日子。",
+       "notes": [
+        {"w": "on the occasion of", "m": "在…的時候", "kk": "/əˋkeʒən/", "pos": "片語",
+         "def": "正式的時間片語，指某個特定事件發生之際；比 when 更莊重，常見於典禮或重大事件。",
+         "use": "He stayed calm on the occasion of the storm.", "useZh": "暴風雨來的時候，他保持鎮定。",
+         "why": "喪子這種事用最平靜的片語帶過——文字本身就在示範「保持一樣」。", "zhw": "的時候"}
+       ]},
+      {"en": "and to see clearly in a living example that the same man can be both most resolute and yielding, and not peevish in giving his instruction;",
+       "zh": "我從一個活生生的例子清楚看到，同一個人可以既非常剛毅、又願意退讓，教導別人的時候也不會不耐煩。",
+       "notes": [
+        {"w": "resolute", "m": "剛毅、堅決", "kk": "/ˋrɛzəˏlut/", "pos": "形容詞",
+         "def": "下了決心就不動搖的；名詞是 resolution——新年新希望的「決心」就是這個字。",
+         "use": "She was resolute in refusing the shortcut.", "useZh": "她堅決不走捷徑。",
+         "why": "剛毅（resolute）與退讓（yielding）是反義詞，卻同時放在一個人身上——這句的重點就是這個矛盾。", "zhw": "剛毅"},
+        {"w": "peevish", "m": "易怒、不耐煩的", "kk": "/ˋpivɪʃ/", "pos": "形容詞",
+         "def": "為小事發脾氣、煩躁易怒的；形容那種「一點就炸」的壞脾氣。",
+         "use": "Lack of sleep makes me peevish.", "useZh": "睡不夠我就容易不耐煩。",
+         "why": "教人最難的不是懂，是不煩——阿波羅尼烏斯連這個都做到了。", "zhw": "不耐煩"}
+       ]},
+      {"en": "and to have had before my eyes a man who clearly considered his experience and his skill in expounding philosophical principles as the smallest of his merits;",
+       "zh": "我親眼見到一個人，他明明很有經驗、很擅長講解哲學道理，卻把這些看成自己最不值一提的長處。",
+       "notes": [
+        {"w": "expounding", "m": "講解、闡述", "kk": "/ɪkˋspaʊndɪŋ/", "pos": "動詞",
+         "def": "expound 是把道理有系統地講清楚；比 explain 更正式，對象通常是學說、理論、經典。",
+         "use": "He spent an hour expounding his theory.", "useZh": "他花了一小時闡述他的理論。",
+         "why": "最會講的人最不把「會講」當回事——因為斯多噶的重點是活出來，不是講出來。", "zhw": "講解"},
+        {"w": "merits", "m": "長處、優點", "kk": "/ˋmɛrɪts/", "pos": "名詞",
+         "def": "值得稱讚的優點或功績；judge on merit 是「看實力不看關係」。",
+         "use": "Judge the plan on its merits.", "useZh": "就這個計畫本身的優點來評斷它。",
+         "why": "把最亮眼的本事排在自己優點的最後一名——謙遜到這個程度是本卷的招牌。", "zhw": "長處"}
+       ]},
+      {"en": "and from him I learned how to receive from friends what are esteemed favours, without being either humbled by them or letting them pass unnoticed.",
+       "zh": "我還從他身上學到，朋友給我好處、給我恩惠的時候，我該怎麼接受——既不會因此覺得矮人一截，也不會把人家的好意當作沒看見。",
+       "notes": [
+        {"w": "esteemed", "m": "被看重的", "kk": "/əˋstimd/", "pos": "形容詞",
+         "def": "esteem 是敬重、高估價值；esteemed favours 指「一般人眼中的大人情」。自尊心的英文就是 self-esteem。",
+         "use": "She is an esteemed guest in this house.", "useZh": "她是這個家非常敬重的客人。",
+         "why": "「一般人眼中的」大人情——一個分詞悄悄拉開了世俗眼光和自己判斷的距離。", "zhw": "恩惠"},
+        {"w": "humbled", "m": "覺得矮人一截", "kk": "/ˋhʌmbld/", "pos": "動詞",
+         "def": "humble 當動詞是使謙卑、使自覺渺小；被幫助後那種「欠了人、抬不起頭」的感覺就是 be humbled。",
+         "use": "Accept help without being humbled by it.", "useZh": "接受幫助，但不必因此覺得矮人一截。",
+         "why": "受人恩惠的兩種失態：覺得欠、或裝沒事。這句教的是中間那條窄路。", "zhw": "矮人一截"}
+       ]}
+    ]}
+  ],
+  "summary": {
+    "points": [
+      "卷一是一張感謝清單：馬可・奧理略逐一點名生命中的老師，把每個人教會他的事一條一條記下來。",
+      "從家人學的是底子——品德、脾氣、謙遜、節制，還有離奢華遠一點的簡單生活。",
+      "從師傅學的是日常紀律：看比賽不選邊站、吃苦耐勞、少慾望、不多管閒事、不輕信壞話。",
+      "迪奧格內圖斯把他帶進哲學：不迷信、受得了直言，年紀輕輕就嚮往木板床那種簡樸的修行日子。",
+      "魯斯提庫斯給他當頭一棒——品格需要磨練：遠離炫技與表演、寫信樸實、讀書讀透、別人願意和解就跟人和好。",
+      "阿波羅尼烏斯示範什麼叫堅定：凡事只回到理性，劇痛與喪子都保持一樣，而且剛毅與退讓可以並存。"
+    ],
+    "take": "好品格不是天生的——是把身邊每個人最好的部分，一件一件認出來、學回來。"
+  }
+}

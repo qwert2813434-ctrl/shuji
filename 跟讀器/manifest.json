@@ -1,0 +1,17 @@
+{
+ "name": "唸書機",
+ "short_name": "唸書機",
+ "start_url": "/",
+ "display": "standalone",
+ "background_color": "#0F0E12",
+ "theme_color": "#0F0E12",
+ "orientation": "portrait",
+ "icons": [
+  {
+   "src": "/icon.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "any maskable"
+  }
+ ]
+}

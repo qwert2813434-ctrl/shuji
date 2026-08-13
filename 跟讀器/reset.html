@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>重置跟讀器</title>
+<style>
+:root{color-scheme:dark}
+body{margin:0;min-height:100vh;display:grid;place-items:center;background:#0F0E12;color:#fff;
+ font:400 16px/1.9 "Inter","PingFang TC",-apple-system,sans-serif;padding:32px}
+main{max-width:420px}
+h1{font-size:26px;font-weight:700;margin:0 0 14px}
+p{color:#B8B4BE;font-size:15px;margin:0 0 10px}
+ul{color:#B8B4BE;font-size:14px;padding-left:20px;margin:14px 0 0}
+li{margin:0 0 6px}
+b{color:#fff}
+.ok{color:#FF4D85;font-weight:600}
+a{display:inline-block;margin-top:22px;background:#fff;color:#0F0E12;text-decoration:none;
+ padding:12px 22px;border-radius:22px;font-size:14px;font-weight:600}
+</style>
+</head>
+<body>
+<main>
+  <h1>重置跟讀器</h1>
+  <p id="s">清理中…</p>
+  <ul id="d"></ul>
+  <a href="./" id="go" hidden>回跟讀器</a>
+</main>
+<script>
+const log = t => { const li = document.createElement('li'); li.textContent = t;
+                   document.getElementById('d').appendChild(li); };
+(async () => {
+  try {
+    if ('serviceWorker' in navigator) {
+      const rs = await navigator.serviceWorker.getRegistrations();
+      for (const r of rs) await r.unregister();
+      log(`解除 Service Worker：${rs.length} 個`);
+    }
+    if ('caches' in window) {
+      const ks = await caches.keys();
+      for (const k of ks) await caches.delete(k);
+      log(`清除快取：${ks.length} 組`);
+    }
+    log('已存的離線章節也一併清掉了');
+    document.getElementById('s').innerHTML =
+      '<span class="ok">清理完成。</span>回去之後會抓到最新版。';
+  } catch (e) {
+    document.getElementById('s').textContent = '清理失敗：' + e;
+  }
+  document.getElementById('go').hidden = false;
+})();
+</script>
+</body>
+</html>

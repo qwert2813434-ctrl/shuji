@@ -1,0 +1,16 @@
+rules_version = '2';
+
+// 跟讀器的跨裝置同步：筆記與閱讀進度。
+//
+// 文件 id ＝ 密語的 SHA-256（64 位十六進位）。密語只留在各裝置，不上傳，
+// 所以「知道位置」等同「知道密語」。沒有登入機制是刻意的——匿名登入誰都能辦，
+// 擋不住任何人，卻要多背一整包 SDK 與 PWA 的登入導向坑。
+//
+// 只給 get 不給 list：擋掉列舉整個 collection 的可能。
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /sync/{key} {
+      allow get, write: if key.matches('^[a-f0-9]{64}$');
+    }
+  }
+}

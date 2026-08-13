@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="zh-Hant" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<title>唸書機</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="apple-touch-icon" href="/icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#0F0E12" id="tc">
+<style>
+:root{
+  --bg:#0F0E12; --surface:#201D24; --accent:#FF4D85;
+  --ink:#FFFFFF; --ink2:#B8B4BE; --faint:#7C7786; --line:#312D38;
+}
+:root[data-theme="light"]{
+  --bg:#F4F1E8; --surface:#FFFFFF; --accent:#3A5A8C;
+  --ink:#26251F; --ink2:#6B6659; --faint:#9A9484; --line:#DAD5C6;
+}
+*{box-sizing:border-box; -webkit-tap-highlight-color:transparent}
+html,body{margin:0; padding:0}
+body{
+  background:var(--bg); color:var(--ink);
+  font-family:"Inter","PingFang TC","Noto Sans TC",-apple-system,sans-serif;
+  font-weight:400; -webkit-font-smoothing:antialiased;
+  padding:calc(14px + env(safe-area-inset-top)) 20px calc(30px + env(safe-area-inset-bottom));
+  max-width:560px; margin:0 auto;
+}
+.top{display:flex; align-items:center; margin-bottom:34px}
+.kick{font-size:12px; font-weight:600; letter-spacing:.28em; margin-right:-.28em; color:var(--faint)}
+.sp{flex:1}
+.tbtn{border:1px solid var(--line); background:none; color:var(--ink2); font:inherit;
+  font-size:12px; border-radius:16px; padding:6px 13px; cursor:pointer}
+h1{font-size:32px; font-weight:700; margin:0 0 6px}
+.note{font-size:14px; color:var(--ink2); margin:0 0 26px}
+.shelf{display:grid; grid-template-columns:repeat(2,1fr); gap:20px 18px}
+.bk{display:block; text-decoration:none; color:inherit}
+.cov{display:block; position:relative; aspect-ratio:2/3; border-radius:12px; overflow:hidden;
+  border:1px solid var(--line); background:var(--surface)}
+.cov img{width:100%; height:100%; object-fit:cover; display:block}
+.bt{font-size:15px; font-weight:600; margin:11px 2px 3px}
+.bm{font-size:12px; color:var(--faint); margin:0 2px}
+.wip{cursor:default}
+.wip .cov img{filter:grayscale(.2) brightness(.8)}
+.spin{width:100%; background:var(--surface); border:1px solid var(--line); border-radius:8px;
+  color:var(--ink); font:inherit; font-size:15px; padding:11px 13px; margin:4px 0 12px}
+.spnote{font-size:13px; line-height:1.95; color:var(--ink2); margin:0 0 18px}
+.spnote b{color:var(--ink); font-weight:600}
+.spst{font-size:13px; color:var(--faint); margin:16px 0 0; min-height:1.4em}
+.spst.bad{color:var(--accent)}
+
+</style>
+</head>
+<body>
+<header class="top">
+  <span class="kick">唸書機</span><span class="sp"></span>
+  <button class="tbtn" id="sync">同步</button><button class="tbtn" id="theme">米白</button>
+</header>
+<h1>今天讀哪本</h1>
+<p class="note">點封面開始聽。</p>
+<main class="shelf">
+  <a class="bk" href="/demo/">
+    <span class="cov"><img src="/demo/cover.jpg" alt="沉思錄・示範 封面"></span>
+    <div class="bt">沉思錄・示範</div>
+    <div class="bm" id="m-demo">2 章</div>
+  </a>
+</main>
+
+<div class="np" id="sp" hidden>
+  <div class="nph"><b>跨裝置同步</b><span class="sp"></span>
+    <button class="tbtn" id="spclose">關閉</button></div>
+  <div class="npb">
+    <p class="spnote">在手機和電腦輸入<b>同一組密語</b>，筆記與閱讀進度就會互通。<br>
+      密語只留在這台裝置、不會上傳——送出去的只有它算出來的位置代碼。<br>
+      設定後看下面的<b>位置代碼</b>：兩台顯示一樣，才是同一份資料。</p>
+    <input class="spin" id="spkey" type="password" placeholder="輸入密語" autocomplete="off">
+    <div class="pact">
+      <button id="spsave">設定並同步</button>
+      <button id="spnow">立即同步</button>
+      <button id="spoff">停用</button>
+    </div>
+    <p class="spst" id="spst"></p>
+  </div>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+function setTheme(t) {
+  document.documentElement.dataset.theme = t;
+  localStorage.setItem('nn-theme', t);
+  $('theme').textContent = t === 'dark' ? '米白' : '深色';
+  $('tc').content = t === 'dark' ? '#0F0E12' : '#F4F1E8';
+}
+setTheme(localStorage.getItem('nn-theme') || 'dark');
+$('theme').onclick = () =>
+  setTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark');
+
+
+/* 每本書的進度：key 是 nn-<書>-done-N / nn-<書>-ch */
+function paintShelf() {
+for (const b of [{"slug": "demo", "chapters": 2}]) {
+  const el = $('m-' + b.slug);
+  if (!el) continue;
+  let done = 0;
+  for (let i = 1; i <= b.chapters; i++)
+    if (localStorage.getItem('nn-' + b.slug + '-done-' + i)) done++;
+  const ch = localStorage.getItem('nn-' + b.slug + '-ch');
+  /* 「讀到第幾章」比「聽完幾章」有用，兩個都要顯示——
+     只顯示 done 的話，跳著聽的人會看到「聽完 3 章」卻其實在第 7 章 */
+  const bits = [];
+  if (ch) bits.push('讀到第 ' + ch + ' 章');
+  if (done) bits.push('聽完 ' + done + ' 章');
+  el.textContent = b.chapters + ' 章' + (bits.length ? '・' + bits.join('・') : '');
+}
+}
+paintShelf();
+
+(() => {
+  if (!('serviceWorker' in navigator) || !isSecureContext) return;
+  let reloading = false;
+  const had = !!navigator.serviceWorker.controller;
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+    if (!had || reloading) return;
+    reloading = true; location.reload();
+  });
+  navigator.serviceWorker.register('/sw.js').then(reg => {
+    const check = () => reg.update().catch(() => {});
+    check();
+    addEventListener('visibilitychange', () => { if (!document.hidden) check(); });
+    setInterval(check, 60000);
+  }).catch(() => {});
+})();
+
+/* ── 跨裝置同步 ──────────────────────────────────────────────
+   Firestore 一份文件裝全部書的筆記與進度，文件位置＝密語的 SHA-256。
+   密語只留在裝置上、不上傳；沒設密語就完全不連線。
+   走 REST 不載 SDK：省一整包，也避開主畫面 App 的登入導向坑。 */
+const FS = k => 'https://firestore.googleapis.com/v1/projects/YOUR-FIREBASE-PROJECT'
+  + '/databases/(default)/documents/sync/' + k;
+const SK = () => localStorage.getItem('nn-sync') || '';
+
+async function hashKey(s) {
+  /* 先正規化再雜湊：全形轉半形（NFKC）、去掉所有空白、轉小寫。
+     手機輸入法很容易打出全形字或多一個空格，看起來一樣、雜湊完全不同，
+     兩台就會各同步到各的文件，永遠碰不到面——實際發生過（2026-08-07）。 */
+  const t = s.normalize('NFKC').replace(/\s+/g, '').toLowerCase();
+  const b = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(t));
+  return [...new Uint8Array(b)].map(x => x.toString(16).padStart(2, '0')).join('');
+}
+/* 位置代碼＝雜湊前四碼。兩台顯示一樣，才是同一份資料 */
+const fp = () => SK() ? '・位置代碼 ' + SK().slice(0, 4).toUpperCase() : '';
+
+/* localStorage 是整個站共用，所以任何一頁都掃得到全部書的狀態 */
+function localState() {
+  const b = {}, get = s => (b[s] = b[s] || { mt: 0, done: {}, pos: {}, hl: {} });
+  for (const k of Object.keys(localStorage)) {
+    let m;
+    if ((m = /^nn-(.+)-(ch|hl|mt)$/.exec(k))) {
+      const o = get(m[1]), v = localStorage.getItem(k);
+      if (m[2] === 'ch') o.ch = Number(v) || 0;
+      else if (m[2] === 'mt') o.mt = Number(v) || 0;
+      else { try { o.hl = JSON.parse(v) || {}; } catch (e) {} }
+    } else if ((m = /^nn-(.+)-(done|pos)-(\d+)$/.exec(k))) {
+      const o = get(m[1]);
+      if (m[2] === 'done') o.done[m[3]] = 1;
+      else o.pos[m[3]] = Number(localStorage.getItem(k)) || 0;
+    }
+  }
+  return { v: 1, b: b };
+}
+
+function applyState(st) {
+  for (const s in st.b) {
+    const o = st.b[s], p = 'nn-' + s + '-';
+    if (o.ch) localStorage.setItem(p + 'ch', String(o.ch));
+    localStorage.setItem(p + 'mt', String(o.mt || 0));
+    for (const n in (o.done || {})) localStorage.setItem(p + 'done-' + n, '1');
+    for (const n in (o.pos || {})) localStorage.setItem(p + 'pos-' + n, String(o.pos[n]));
+    localStorage.setItem(p + 'hl', JSON.stringify(o.hl || {}));
+  }
+}
+
+/* 合併規則：
+   筆記   逐條比時間，新的贏（刪除留墓碑，才不會被另一台復活）
+   已讀   聯集，標過就是標過
+   章與位置  整組取「最近讀過那一台」的，免得舊裝置把新進度蓋掉 */
+function mergeState(a, c) {
+  const out = { v: 1, b: {} };
+  const names = {};
+  for (const s in a.b) names[s] = 1;
+  for (const s in c.b) names[s] = 1;
+  for (const s in names) {
+    const blank = { mt: 0, done: {}, pos: {}, hl: {} };
+    const x = a.b[s] || blank, y = c.b[s] || blank;
+    const newer = (y.mt || 0) > (x.mt || 0) ? y : x;
+    const hl = Object.assign({}, x.hl || {});
+    for (const k in (y.hl || {})) {
+      const p = hl[k], q = y.hl[k];
+      if (!p || (q.ts || 0) >= (p.ts || 0)) hl[k] = q;
+    }
+    out.b[s] = {
+      mt: Math.max(x.mt || 0, y.mt || 0),
+      /* 兩邊都沒有時間戳（同步功能上線前的舊資料）就取讀比較遠的那台，
+         不然電腦的第 3 章會贏過手機的第 7 章 */
+      ch: (x.mt || 0) === (y.mt || 0) ? Math.max(x.ch || 0, y.ch || 0)
+                                      : (newer.ch || x.ch || y.ch || 0),
+      pos: Object.assign({}, x.pos || {}, y.pos || {}, newer.pos || {}),
+      done: Object.assign({}, x.done || {}, y.done || {}),
+      hl: hl
+    };
+  }
+  return out;
+}
+
+function stamp(slug) { localStorage.setItem('nn-' + slug + '-mt', String(Date.now())); }
+function touch(slug) { stamp(slug); syncSoon(); }
+let syncTimer = null;
+function syncSoon() { clearTimeout(syncTimer); syncTimer = setTimeout(() => syncNow(), 4000); }
+
+function syncSay(msg, bad) {
+  const el = document.getElementById('spst');
+  if (el) { el.textContent = msg; el.classList.toggle('bad', !!bad); }
+  const b = document.getElementById('sync');
+  if (b) b.textContent = SK() ? '同步' : '同步・未設';
+}
+
+let syncing = false;
+async function syncNow(manual) {
+  const k = SK();
+  if (!k) { if (manual) syncOpen(); return; }
+  if (syncing) return;
+  syncing = true; syncSay('同步中…');
+  try {
+    let remote = { v: 1, b: {} };
+    const r = await fetch(FS(k), { cache: 'no-store' });
+    if (r.ok) {
+      const j = await r.json();
+      const s = j.fields && j.fields.blob && j.fields.blob.stringValue;
+      if (s) remote = JSON.parse(s);
+    } else if (r.status !== 404) {
+      throw new Error('讀取失敗 ' + r.status);
+    }
+    const merged = mergeState(localState(), remote);
+    applyState(merged);
+    const w = await fetch(FS(k), {
+      method: 'PATCH', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ fields: { blob: { stringValue: JSON.stringify(merged) } } })
+    });
+    if (!w.ok) throw new Error('寫入失敗 ' + w.status);
+    syncSay('已同步・' + new Date().toLocaleTimeString('zh-TW', { hour: '2-digit', minute: '2-digit' }) + fp());
+    if (typeof afterSync === 'function') afterSync();
+  } catch (e) {
+    syncSay(e.message || '同步失敗', true);
+  }
+  syncing = false;
+}
+
+function syncOpen() {
+  document.getElementById('sp').hidden = false;
+  syncSay(SK() ? '已設定密語' + fp() : '尚未設定');
+}
+document.getElementById('sync').onclick = () => syncOpen();
+document.getElementById('spclose').onclick = () => { document.getElementById('sp').hidden = true; };
+document.getElementById('spsave').onclick = async () => {
+  const v = document.getElementById('spkey').value.trim();
+  if (v.length < 4) { syncSay('密語太短，至少四個字', true); return; }
+  localStorage.setItem('nn-sync', await hashKey(v));
+  document.getElementById('spkey').value = '';
+  syncNow(true);
+};
+document.getElementById('spnow').onclick = () => syncNow(true);
+document.getElementById('spoff').onclick = () => {
+  localStorage.removeItem('nn-sync'); syncSay('已停用，這台不再同步');
+};
+syncSay(SK() ? '已設定密語' : '尚未設定');
+if (SK()) {
+  syncNow();
+  addEventListener('visibilitychange', () => { if (!document.hidden) syncNow(); });
+}
+
+/* 同步完重新算每本書的進度字樣 */
+function afterSync() { try { paintShelf(); } catch (e) {} }
+</script>
+</body>
+</html>
