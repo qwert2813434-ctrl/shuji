@@ -96,6 +96,10 @@ def align_src(point_texts, paras, max_span=None, max_skip=None):
 async def synth(text, voice, mp3_path):
     """合成整章，回傳 [(字串, 起, 訖)] 秒。"""
     import edge_tts
+    import edge_tts.communicate
+    # 2026-10-12 微軟舊主機 speech.platform.bing.com 合成一律 403（edge-tts #490），改走新主機（照 PR #491）
+    edge_tts.communicate.WSS_URL = ("wss://api.msedgeservices.com/tts/cognitiveservices/websocket/v1"
+                                    "?Ocp-Apim-Subscription-Key=" + edge_tts.constants.TRUSTED_CLIENT_TOKEN)
     marks = []
     with open(mp3_path, "wb") as f:
         # edge-tts 7.x 預設是 SentenceBoundary，逐字時間戳一定要指定 WordBoundary

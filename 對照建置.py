@@ -27,6 +27,10 @@ GAP_EN, IG_MIX, GAP_MIX, BG, SG = 0.45, 0.3, 0.6, 0.3, 0.7
 
 async def synth_one(text, voice, rate, mp3, sem):
     import edge_tts
+    import edge_tts.communicate
+    # 2026-10-12 微軟舊主機 speech.platform.bing.com 合成一律 403（edge-tts #490），改走新主機（照 PR #491）
+    edge_tts.communicate.WSS_URL = ("wss://api.msedgeservices.com/tts/cognitiveservices/websocket/v1"
+                                    "?Ocp-Apim-Subscription-Key=" + edge_tts.constants.TRUSTED_CLIENT_TOKEN)
     async with sem:
         marks = []
         with open(mp3, "wb") as f:
