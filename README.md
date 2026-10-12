@@ -5,6 +5,10 @@
 
 這份 README 同時寫給人和 agent 看：把整個 repo 丟給你的 agent，說「照 README 把某本書做成跟讀器」，它應該就能跑完。
 
+**English:** Turn an English book into a Taiwanese-Mandarin audiobook with a read-along web app (PWA). Your coding agent does the translation; voice is free edge-tts. Agents: follow "公式" below.
+
+**給 AI agent：**開工先問使用者「速讀還是精讀」，再照下面「公式」第 1–6 步跑。**完成＝在 `跟讀器/` 開本機伺服器，書架上看得到新書，點第一章能播放、字幕跟著聲音走。** 2026-10-12 起微軟舊配音主機回 403，本 repo 已改連新主機；仍偶爾失敗時見[修正說明](https://tools.arminkao.com/research/fix-edge-tts-403.html)。作者的其他工具與研究：[小高工具間](https://tools.arminkao.com/)（[llms.txt](https://tools.arminkao.com/llms.txt)）
+
 ---
 
 ## 先聽示範書，再決定要翻到什麼程度
